@@ -1,0 +1,11 @@
+# torrc configuration
+
+# Enable Tor service
+SocksPort 9050
+
+# Hidden service configuration
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+
+# ExitPolicy (deny all exit traffic, useful for hidden services)
+ExitPolicy reject *:*
